@@ -684,7 +684,7 @@ Plugin.prototype.loadContent = function(index, rec, delay) {
     var _isVideo = _this.isVideo(_src, index);
     if (!utils.hasClass(_this.___slide[index], 'lg-loaded')) {
         if (iframe) {
-            _this.___slide[index].insertAdjacentHTML('afterbegin', '<div class="lg-video-cont" style="max-width:' + _this.s.iframeMaxWidth + '"><div class="lg-video"><iframe class="lg-object" frameborder="0" src="' + _src + '"  allowfullscreen="true"></iframe></div></div>');
+            _this.___slide[index].insertAdjacentHTML('afterbegin', '<div class="lg-video-cont" style="max-width:' + _this.s.iframeMaxWidth + '"><div class="lg-video"><iframe class="lg-object" frameborder="0" src="' + _src + '" allowfullscreen="true" allow="xr-spatial-tracking"></iframe></div></div>');
         } else if (_hasPoster) {
             var videoClass = '';
             if (_isVideo && _isVideo.youtube) {
